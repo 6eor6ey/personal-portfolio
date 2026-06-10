@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Gonzalez's Digital CV</title>
+    <meta name="description" content="Digital CV of George Gonzalez, a Computer Science and Computer Engineering graduate.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cv-header">
+        
+        <div class="header-left">
+            <img src="images/georgeHeaderPic.JPG" alt="Profile Picture of George Gonzalez">
+        </div>
+        
+        <div class="header-center">
+            <h1>George Gonzalez</h1>
+        </div>
+    
+      <div class="header-right">
+    <div class="contact-info">
+        <p>Email: <a href="mailto:gonzalezg1209@gmail.com">gonzalezg1209@gmail.com</a></p>
+        <p>Phone: <a href="tel:+19095593276">(909) 559-3276</a></p>
+    </div>
+</div>
+        
+    </header>
+
+    <main>
+        <section>
+            <h2>Summary</h2>
+            <p>Software and Computer Engineer with a unique background in CNC programming and precision machining. Experienced in backend development using Golang with a strong focus on security and data integrity. Passionate about integrating hardware and software through projects like brain-controlled robotics.</p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <p>
+                <strong>University of La Verne</strong><br>
+                Bachelor of Science in Computer Science and Computer Engineering, Minor in Physics (2018 - 2023)
+            </p>
+            <p>
+                <strong>NTMA Machinist Career College</strong><br>
+                Certificate of Course Completion in CNC Machine Operating and Programming (2018)
+            </p>
+        </section>
+
+        <section>
+            <h2>Technologies & Skills</h2>
+            <h3>Programming</h3>
+            <ul>
+                <li>C/C++ & Python</li>
+                <li>Golang</li>
+                <li>Assembly & G-Code</li>
+                <li>PostgreSQL & SQL</li>
+                <li>HTML & CSS</li>
+            </ul>
+
+            <h3>Tools & Software</h3>
+            <ul>
+                <li>Docker & Kubernetes</li>
+                <li>Git, Jira, & MS 365</li>
+                <li>Mastercam & Arduino IDE</li>
+                <li>Linux, Windows, Mac</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Key Achievements</h2>
+            <ol>
+                <li>Successfully merged critical security fixes into production at Infoblox.</li>
+                <li>Developed ITAR-compliant industrial parts at Baumann Engineering.</li>
+                <li>Designed a novel Brain Controlled Interface (BCI) for drone aviation.</li>
+                <li>University of La Verne Dean’s List Recipient.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Featured Projects</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong><a href="REDACT">Brain Controlled Drone</a></strong></td>
+                        <td>Designed a novel method for operating a remote-controlled drone utilizing a neuro-sensing headset to interpret user brainwave activity.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><a href="REDACT">Dynamic Radiance Simulation</a></strong></td>
+                        <td>A 3D illumination model for synthetic planetary analysis using Cassini Spacecraft data.</td>
+                    </tr>
+                    <tr>
+                        <td><strong><a href="REDACT">Audit-Log Security Solution</a></strong></td>
+                        <td>Leveraged HTTP protocols and RegEx to redact sensitive fields in plain-text logs.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Have a project in mind? Let's talk!</p>
+
+            <form action="#" method="POST">
+                
+                <div>
+                    <label for="user-name">Name:</label>
+                    <input type="text" id="user-name" name="name" placeholder="Your Name" required>
+                </div>
+
+                <div>
+                    <label for="user-email">Email:</label>
+                    <input type="email" id="user-email" name="email" placeholder="mail@example.com" required>
+                </div>
+
+                <div>
+                    <label for="user-phone">Phone Number:</label>
+                    <input type="tel" id="user-phone" name="phone" placeholder="123-456-7890">
+                </div>
+
+                <div>
+                    <label for="user-org">Organization:</label>
+                    <input type="text" id="user-org" name="organization" placeholder="Company Name">
+                </div>
+
+                <div>
+                    <label for="user-role">Role:</label>
+                    <input type="text" id="user-role" name="role" placeholder="e.g. Hiring Manager">
+                </div>
+
+                <div>
+                    <label for="contact-reason">Reason for Contact:</label>
+                    <select id="contact-reason" name="reason">
+                        <option value="job-offer">Job Offer</option>
+                        <option value="collaboration">Collaboration</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <p>Preferred Contact Method:</p>
+                    <div class="radio-options">
+                        <input type="radio" id="pref-email" name="contact-method" value="email" checked>
+                        <label for="pref-email">Email</label>
+
+                        <input type="radio" id="pref-phone" name="contact-method" value="phone">
+                        <label for="pref-phone">Phone</label>
+
+                        <input type="radio" id="pref-linkedin" name="contact-method" value="linkedin">
+                        <label for="pref-linkedin">LinkedIn</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="user-message">Message:</label>
+                    <textarea id="user-message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <input type="reset" value="Clear Form" class="btn btn-secondary">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>Visit my Project Website at <a href="REDACT_WEBSITE">George's Projects</a>.</p>
+        <p><em>CV Established 2026</em></p>
+    </footer>
+
+</body>
+</html>

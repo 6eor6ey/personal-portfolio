@@ -1,0 +1,355 @@
+/* Global Box Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles and Typography */
+body {
+    /* Fallback font stack and rem scaling */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #dbd8d8; 
+    background-color: hsl(240, 3%, 7%); 
+    
+    /* Box model format block */
+    margin: 20px auto; /* 20px top/bottom, auto centers it horizontally */
+    padding: 30px; /* Space inside the body border */
+    border: 2px solid #555; /* Visible border to observe the body's edge */
+    max-width: 1000px; /* Prevents the CV from stretching too wide on massive screens */
+}
+
+/* Turn the header into a flex container */
+.cv-header {
+    display: flex; 
+    /* justify-content spreads the 3 child divs across the horizontal space */
+    justify-content: space-between; 
+    /* minimum height so the items have room to be placed top center bottom */
+    min-height: 250px; 
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #333;
+}
+
+/* Position the Left child (Picture) */
+.header-left {
+    flex: 1; /* forces equal width takes up exactly half the remaining space */
+    align-self: flex-start; /* Forces this specific div to the top */
+    display: flex;
+    justify-content: flex-start; /* Hardpins the picture to the left wall */
+}
+
+/* moved the image styling here so it applies to the image inside the left div */
+.header-left img {
+    /* perfect square container */
+    width: 150px;  
+    height: 150px; 
+    object-fit: cover; 
+    object-position: 50% 20%;
+    border-radius: 50%;         
+    border: 4px solid hsl(205, 74%, 31%); 
+    display: block;
+    margin: 0; 
+}
+
+/* position the center child (Name) */
+.header-center {
+    flex: 0 1 auto; /* the side containers do the heavy lifting */
+    align-self: center; /* forces this specific div to the exact vertical center */
+    text-align: center;
+}
+
+/* Right Column Wrapper */
+.header-right {
+    flex: 1; /* balances the left side to keep your name perfectly centered */
+    align-self: flex-end; /* forces this specific div to the bottom */
+    display: flex;
+    justify-content: flex-end; /* shoves the inner .contact-info box against the right wall */
+}
+
+/* Contact Box contents */
+.contact-info {
+    text-align: left; /* forces the two lines to have a clean aligned left edge */
+    font-size: 0.9rem;
+}
+
+.contact-info p {
+    margin-bottom: 5px; /* padding between email and phone */
+}
+
+/* Heading Hierarchy and Alignment */
+h1, h2, h3 {
+    color: hsl(205, 74%, 31%); /* consistent deep blue brand color */
+    text-align: center;
+    text-transform: uppercase; /* emphasizing headings */
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    /* Adding depth with a subtle text shadow */
+    text-shadow: 2px 2px 4px rgba(219, 216, 216, 0.1); 
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid hsl(180, 0%, 59%);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    
+}
+h3 {
+    margin-top: 20px;
+    padding-bottom: 5px; 
+}
+
+/* List Indentation & Spacing */
+ul, ol {
+    padding-left: 30px; /* Restores the internal space for bullets and numbers */
+    
+    margin-bottom: 15px; /* Adds breathing room below the entire list */
+}
+
+li {
+    margin-bottom: 8px;  /* Spaces out the individual list items so they don't look cramped */
+}
+
+section {
+    margin-bottom: 40px; /* Creates vertical space between sections (collapsing margins apply here) */
+    padding: 20px; /* Space inside the section */
+    border: 1px solid #333; /* Subtle border to distinctly separate sections */
+    border-radius: 8px; /* Softens the corners of the section boxes */
+    background-color: hsl(240, 3%, 10%); /* Slightly lighter than the body background for contrast */
+}
+
+/* Navigation and Links */
+a {
+    text-decoration: none; 
+    color: hsl(200, 100%, 40%); /* Distinct link color */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: hsl(200, 100%, 25%); /* Darkens on hover for feedback */
+    text-decoration: underline;
+}
+
+/* Data Table Styling (Formatting the grid) */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Merges double borders into single borders */
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #555;
+    text-align: left;
+}
+
+th {
+    background-color: hsl(240, 3%, 12%); /* Slightly highlights the header row */
+}
+
+/* form styling */
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    background: rgb(50, 50, 50);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(244, 242, 242, 0.05);
+}
+
+.form-group, div {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* targeting all input fields */
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+textarea, 
+select {
+    width: 100%;
+    padding: 12px; /* increased padding for better touch targets */
+    border: 1px solid #717070;
+    border-radius: 4px;
+    background-color: hsl(240, 3%, 15%);
+    color: #dbd8d8;
+    outline: none; 
+}
+
+/* custom focus state */
+input:focus, textarea:focus, select:focus {
+    border-color: hsl(205, 74%, 31%); /* highlights border with brand color */
+    box-shadow: 0 0 5px rgba(29, 131, 208, 0.5);
+}
+
+/* flexbox for the Radio Buttons */
+.radio-options {
+    display: flex; /* lines the radio buttons up horizontally */
+    gap: 15px; /* puts 15px of space between each option */
+    align-items: center; /* centers the circles with the text vertically */
+    margin-bottom: 0; 
+}
+
+.radio-options label {
+    display: inline; /* stops the radio labels from stacking on top of the circles */
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+/* flexbox for the Submit/Clear Buttons */
+.form-actions {
+    display: flex; /* lines the buttons up horizontally */
+    justify-content: flex-end; /* pushes both buttons to the far right side */
+    gap: 15px; /* spaces the buttons out from each other */
+    margin-top: 20px;
+}
+
+/* Button Styling */
+button[type="submit"], input[type="reset"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Actual Submit Button */
+button[type="submit"] {
+    background-color: hsl(205, 74%, 31%);
+    color: white;
+}
+
+/* Submit Button when hover */
+button[type="submit"]:hover {
+    background-color: hsl(200, 100%, 40%);
+}
+
+/* Actual Reset Button */
+input[type="reset"] {
+    background-color: #555;
+    color: white;
+}
+
+/* Reset Button when hover */
+input[type="reset"]:hover {
+    background-color: #777;
+}
+
+/* Alligns Footer */
+footer {
+    text-align: center;
+    color: #888;
+}
+
+/* Animations */
+
+/* Profile Picture Hover Effect */
+.header-left img {
+    /* tells the browser to smoothly animate any changes to transform or box-shadow over 0.3 seconds */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.header-left img:hover {
+    transform: scale(1.05); /* zooms the picture in by 5% */
+    box-shadow: 0 0 20px rgba(29, 131, 208, 0.6); /* adds a brand-colored glow */
+}
+
+/* Page Load Fade-In Sequence */
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Starts slightly lower down the screen */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Ends in its final, normal position */
+    }
+}
+
+section {
+    /* Applies the animation to every <section> on the page */
+    animation: slideUpFade 0.8s ease-out forwards;
+    opacity: 0; /* Ensures they are invisible before the animation starts */
+}
+
+/* Staggers the load-in so they appear one after the other cascading down the screen */
+section:nth-of-type(1) { animation-delay: 0.1s; }
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.3s; }
+section:nth-of-type(4) { animation-delay: 0.4s; }
+section:nth-of-type(5) { animation-delay: 0.5s; }
+section:nth-of-type(6) { animation-delay: 0.6s; }
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) { /* 768px covers the wider spectrum of modern mobile viewports */
+    
+    /* Body & Spacing Adjustments */
+    body {
+        margin: 10px; /* reduces outer margin to give more room for text */
+        padding: 15px; /* reduces inner padding */
+    }
+
+    /* Un-Flexing the Header */
+    .cv-header {
+        flex-direction: column; /* changes the row into a vertical stack */
+        align-items: center; /* centers all three blocks horizontally */
+        gap: 20px; /* adds space between the stacked blocks */
+        text-align: center;
+    }
+
+    /* Overrides the flex: 1 balancers */
+    .header-left, 
+    .header-center, 
+    .header-right {
+        flex: none;
+        align-self: center; /* forces everything to the absolute middle */
+        justify-content: center;
+    }
+
+    /* Centers the email and phone number */
+    .contact-info {
+        text-align: center; 
+    }
+
+    /* Typography Scaling */
+    h1 {
+        font-size: 2rem; /* shrinks the main name slightly to fit smaller screens */
+    }
+
+    /* Fixes the Table Overflow */
+    table {
+        display: block; /* forces the table to act like a block */
+        overflow-x: auto; /* adds a horizontal scrollbar only to the table if it gets too wide */
+        white-space: nowrap; /* prevents the text inside the table from stacking awkwardly */
+    }
+
+    /* Form Adjustments for Touch Targets */
+    .radio-options {
+        flex-direction: column; /* stacks the radio buttons vertically */
+        align-items: flex-start; /* aligns them to the left */
+        gap: 10px;
+    }
+
+    .form-actions {
+        flex-direction: column; /* stacks the submit/clear buttons */
+        width: 100%;
+    }
+
+    .form-actions button, 
+    .form-actions input {
+        width: 100%; /* makes the buttons full width for easy thumb tapping */
+    }
+}
